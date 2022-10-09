@@ -1,3 +1,13 @@
+html {
+   box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+/* outline */
+
 /* CSS-Змінні */
 :root {
    --title-dark-color: #212121;
@@ -15,6 +25,7 @@
 }
 
 body {
+   margin: 0;
    font-family: 'Roboto', sans-serif;
    color: var(--title-dark-color);
 }
