@@ -42,6 +42,8 @@ body {
 
 .list {
    list-style: none;
+   padding: 0;
+   margin: 0;
 }
 .logo-header,
 .logo-footer {  
@@ -51,52 +53,88 @@ body {
    line-height: 1.19;
    letter-spacing: 0.03em;
 }
+.container {
+   width: 1200;
+   margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+}
 
 /* Шапка сайту */
 .header {
-   background-color: var(--white-color);
+   background-color: var(--white-color); 
+}
+.header .container {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   /* align-items: center; */
+   /* text-align: center; */
 }
 .logo-header {
    color: var(--black-color);
+   margin-right: 93px;
 }
-.nav,
+.nav-item,
 .address-header {   
    font-weight: 500;
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.02em;
+   margin-left: 50px;
 }
-.nav {
+.nav-item {
    color: var(--title-dark-color);
 }
 .address-header {
    color: var(--text-dark-color);
 }
 .active,
-.nav:hover,
-.nav:focus,
+.nav-item:hover,
+.nav-item:focus,
 .address-header:hover,
 .address-header:focus,
 .logo-header > span {
    color: var(--accent-color);
 }
+.nav,
+.header .list {
+   display: flex; 
+   align-items: center;
+   text-align: center;
+}
 
 /* Герой */
 .hero {
-   background-color: var(--background-dark-color);
-   width: 1600px;
-   height: 600px;
+   background-color: var(--background-dark-color);   
+   /* display: inline-block; 
+   text-align: center;
+   /* width: 1600px; */
+   /* height: 600px; */
+} 
+.hero .container {
+   /* display: block; */
+   align-items: center;
+   text-align: center;
+   /* padding-left: 250px;
+   padding-right: 250px; */
+   padding-top: 200px;
+   padding-bottom: 200px;
+   margin-bottom: 94px;
 }
 .hero-title {
    color: var(--white-color);   
    font-weight: 900;
    font-size: 44px;
    line-height: 1.36;   
-   text-align: center;
+   /* text-align: center; */
    letter-spacing: 0.06em;
    text-transform: uppercase;
-   width: 696px;
-   height: 120px;
+   max-width: 696px;
+   /* height: 120px; */
+   margin: 0 auto 30px;
+   /* margin-bottom: 30px; */
 }
 .hero-button {
    color: var(--white-color);
@@ -108,8 +146,9 @@ body {
    align-items: center;
    text-align: center; */
    letter-spacing: 0.06em;
-   width: 216px;
-   height: 50px;
+   /* width: 216px;
+   height: 50px; */
+   padding: 10px 32px;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -130,6 +169,15 @@ body {
    line-height: 1.71;   
    letter-spacing: 0.03em;
 }
+.characteristics .container {
+   margin-bottom: 94px;
+}
+.characteristics .list {
+   display: flex;  
+}
+.characteristics .list-item:not(:last-child) {
+   padding-right: 30px;
+}
 
 /* Чим ми займаємося */
 .works-title {   
@@ -138,11 +186,25 @@ body {
    line-height: 1.17;
    text-align: center;
    letter-spacing: 0.03em;
+   margin-bottom: 50px;
+}
+.works .list {
+   display: flex;
+}
+.works .container {
+   margin-bottom: 94px;
+}
+.works .list-item:not(:last-child) {
+   padding-right: 30px;
 }
 
 /* Наша команда */
 .team {
    background-color: var(--background-gray-color);
+}
+.team .container {
+   padding-top: 94px;
+   padding-bottom: 94px;
 }
 .team-title {   
    font-weight: 700;
@@ -150,13 +212,17 @@ body {
    line-height: 1.17;
    text-align: center;
    letter-spacing: 0.03em;
+   margin-bottom: 50px;
 }
 .card {
    background-color: var(--white-color);
    font-size: 16px;
    line-height: 1.19;
    text-align: center;
-   letter-spacing: 0.03em;
+   letter-spacing: 0.03em;   
+}
+.card:not(:last-child) {
+   margin-right: 30px;
 }
 .card-title {
    font-weight: 500;
@@ -164,15 +230,24 @@ body {
 .card-text {
    color: var(--text-dark-color);
 }
+.team .list {
+   display: flex;
+}
 
 /* Підвал сторінки */
 .footer {
    background-color: var(--background-dark-color);
-   width: 1600px;
-   height: 252px;
+   /* width: 1600px; */
+   /* height: 252px; */
+}
+.footer .container {
+   padding-top: 60px;
+   padding-bottom: 60px;
+   /* display: block; */
 }
 .logo-footer {
    color: var(--white-color);
+   margin-bottom: 20px;
 } 
 .map-footer,
 .address-footer {   
@@ -186,6 +261,7 @@ body {
 }
 .address-footer {
    color: var(--text-light-color);
+   margin-top: 9px;
 }
 .map-footer:hover,
 .map-footer:focus,
@@ -223,4 +299,17 @@ body {
    font-size: 16px;
    line-height: 1.88;  
    letter-spacing: 0.03em;
+}
+.portfolio .list {
+   display: flex;
+}
+.projects {
+   flex-wrap: wrap;
+}
+.buttons {
+   justify-content: center;
+}
+.portfolio .container {
+   margin-top: 94px;
+   margin-bottom: 94px;
 }
