@@ -235,7 +235,9 @@ p {
 
    font-size: 16px;
    line-height: 1.19;  
-   letter-spacing: 0.03em;   
+   letter-spacing: 0.03em;
+   
+   border-radius: 0px 0px 4px 4px;
 }
 .card:not(:last-child) {
    margin-right: 30px;
@@ -302,6 +304,7 @@ p {
 .portfolio-button {
    padding: 6px 22px;
    text-align: center;
+   border-radius: 4px;
 
    background-color: var(--background-gray-color);
 
@@ -320,7 +323,7 @@ p {
 .projects {
    display: flex;
    flex-wrap: wrap;
-   gap: 30px;
+   gap: 30px; 
 
    /* display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -329,13 +332,16 @@ p {
    grid-row-gap: 30px; */
 }
 .project {
-   flex-basis: calc((100% - 60px) / 3);
-   border-bottom: 1px solid var(--border-portfolio-color);
+   flex-basis: calc((100% - 60px) / 3);   
 
    background-color: var(--white-color);    
 }
+.project img {
+   width: 100%;
+}
 .project-description {
    padding: 20px 24px;
+   border: 1px solid var(--border-portfolio-color);
 }
 .project-title {  
    font-weight: 700;
