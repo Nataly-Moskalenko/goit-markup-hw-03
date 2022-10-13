@@ -291,11 +291,6 @@ p {
 }
 
 /* Портфоліо */
-.projects {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 30px;   
-}
 .buttons {
    display: flex;
    justify-content: center;
@@ -322,14 +317,25 @@ p {
    background-color: var(--accent-color);
    color: var(--white-color);   
 }
-.project-description {
-   padding: 20px 24px;
+.projects {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+
+   /* display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-column-gap: 30px;
+   grid-row-gap: 30px; */
 }
 .project {
-   flex-basis: calc((100% - 60px)/ 3);
+   flex-basis: calc((100% - 60px) / 3);
    border-bottom: 1px solid var(--border-portfolio-color);
 
    background-color: var(--white-color);    
+}
+.project-description {
+   padding: 20px 24px;
 }
 .project-title {  
    font-weight: 700;
